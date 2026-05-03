@@ -81,7 +81,7 @@ Edit `memory/config/memory_config.yaml` to tune:
 1. **Explicit dependency injection** for the CA engine — no hidden globals
 2. **Graceful fallback** when FAISS or embeddings are unavailable
 3. **Generic test data** using entity_X placeholders (no domain-specific content)
-4. **No confidential information** anywhere in code, comments, or test data
+
 
 ## License
 
