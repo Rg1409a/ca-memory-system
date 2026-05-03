@@ -43,10 +43,54 @@ ca-memory-system/
 │   ├── retrieval/hybrid_retriever.py  # FAISS + CA hybrid pipeline
 │   ├── agents/agent_memory.py         # AgentMemory with wired HybridRetriever
 │   └── lace_memory.py           # Core CA engine wrapper (LaceMemory class)
+├── ca_string_diagrams/          # Phase 1: Causal String Diagram DSL
+│   ├── dsl.py                   # Wire, Box, DiagramComposer classes
+│   ├── equation_parser.py       # Physics equation → causal diagram parser
+│   ├── monoidal.py              # Composition rules (sequential/parallel)
+│   ├── ca_integration.py        # CA engine hook for dynamic weights
+│   └── teacher_student.py       # Training loop architecture
+├── cfpe_engine/                 # Phase 2: Causal First Principles Engine
+│   ├── consistency_checks.py    # Physical validation (dimensions, conservation)
+│   ├── counterfactual.py        # Counterfactual simulation ("what if" queries)
+│   ├── distillation.py          # Teacher-student distillation pipeline
+│   ├── benchmarking/            # Benchmark suite vs LLM baselines
+│   └── test_cfpe_engine.py      # Comprehensive test suite (12 tests, all pass)
 ├── tests/                       # Validation suite
 ├── examples/                    # Usage demonstrations
 └── README.md                    # This file
 ```
+
+---
+
+## Causal First Principles Engine (CFPE) — Phase 2
+
+The CFPE moves beyond LLM next-token prediction by combining:
+1. **Physical consistency checks** — Dimensional analysis, conservation laws, causal acyclicity
+2. **Counterfactual simulation** — "What if I change node X?" → observe downstream effects
+3. **Teacher-student distillation** — Student corrections become teacher training signals
+
+### Quick Start
+
+```python
+from cfpe_engine import CFPEEngine
+
+engine = CFPEEngine()
+
+# Parse equation into causal diagram
+diagram = engine.parse("F = m * a")
+
+# Validate physical consistency
+checks = engine.validate_consistency(diagram)
+
+# Run counterfactual simulation
+results = engine.counterfactual(diagram, {"m": 2.0})
+
+# Distill student corrections to teacher training data
+corrections = [{"check": "dimensional_consistency", "action": "fix_units"}]
+training_data = engine.distill(corrections)
+```
+
+See `cfpe_engine/README.md` for full documentation and usage examples.
 
 ---
 
