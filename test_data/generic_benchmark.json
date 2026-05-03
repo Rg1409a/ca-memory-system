@@ -1,0 +1,141 @@
+{
+  "ca": {
+    "capillary_locking": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.108,
+      "recall": 1.0,
+      "f1": 0.195,
+      "hit_rate": true
+    },
+    "tln_stiction_risk": {
+      "retrieved_count": 37,
+      "time_sec": 0.0007,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    },
+    "v_dw_vs_electrostatic": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.054,
+      "recall": 1.0,
+      "f1": 0.103,
+      "hit_rate": true
+    },
+    "silanol_pathway": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    },
+    "sam_mechanism": {
+      "retrieved_count": 37,
+      "time_sec": 0.0006,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    }
+  },
+  "chromadb": {
+    "capillary_locking": {
+      "retrieved_count": 5,
+      "time_sec": 0.0786,
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.444,
+      "hit_rate": true
+    },
+    "tln_stiction_risk": {
+      "retrieved_count": 5,
+      "time_sec": 0.0897,
+      "precision": 0.4,
+      "recall": 0.667,
+      "f1": 0.5,
+      "hit_rate": true
+    },
+    "v_dw_vs_electrostatic": {
+      "retrieved_count": 5,
+      "time_sec": 0.0789,
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.286,
+      "hit_rate": true
+    },
+    "silanol_pathway": {
+      "retrieved_count": 5,
+      "time_sec": 0.0888,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
+      "hit_rate": true
+    },
+    "sam_mechanism": {
+      "retrieved_count": 5,
+      "time_sec": 0.0852,
+      "precision": 0.4,
+      "recall": 0.667,
+      "f1": 0.5,
+      "hit_rate": true
+    }
+  },
+  "test_data_meta": {
+    "description": "Causal DAG for MEMS stiction physics \u2014 test case for CA memory system benchmarking",
+    "source": "Domain expert knowledge synthesis (MEMS surface physics)",
+    "total_triplets": 47,
+    "unique_nodes": 38,
+    "query_examples": [
+      "What causes capillary locking in MEMS accelerometers?",
+      "How does TiN surface energy affect stiction risk?",
+      "Compare Van der Waals vs electrostatic pull-in for polysilicon",
+      "What role do silanol groups play in hygroscopic adhesion?",
+      "How does SAM coating reduce stiction?"
+    ]
+  },
+  "queries": {
+    "capillary_locking": {
+      "question": "What causes capillary locking in MEMS accelerometers?",
+      "expected_nodes": [
+        "surface_tension_water",
+        "contact_angle",
+        "liquid_bridge_force",
+        "capillary_locking"
+      ]
+    },
+    "tln_stiction_risk": {
+      "question": "How does TiN surface energy affect stiction risk?",
+      "expected_nodes": [
+        "titanium_nitride_surface_energy",
+        "adhesion_force",
+        "stiction_failure"
+      ]
+    },
+    "v_dw_vs_electrostatic": {
+      "question": "Compare Van der Waals vs electrostatic pull-in for polysilicon",
+      "expected_nodes": [
+        "van_der_waals_force",
+        "electrostatic_pull_in"
+      ]
+    },
+    "silanol_pathway": {
+      "question": "What role do silanol groups play in hygroscopic adhesion?",
+      "expected_nodes": [
+        "silicon_oxide_hygroscopicity",
+        "hygroscopic_water_adsorption",
+        "silanol_group_density"
+      ]
+    },
+    "sam_mechanism": {
+      "question": "How does SAM coating reduce stiction?",
+      "expected_nodes": [
+        "self_assembled_monolayer",
+        "surface_energy_reduction",
+        "adhesion_force"
+      ]
+    }
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "metadata": {
+    "description": "Causal DAG for domain knowledge \u2014 test case for CA memory system benchmarking",
+    "source": "Synthetic test data (generic causal relationships)",
+    "total_triplets": 47,
+    "unique_nodes": 37,
+    "query_examples": [
+      "What causes entity B in the domain?",
+      "How does factor X affect outcome Y?",
+      "Compare mechanism A vs mechanism B for process C",
+      "What is the relationship between factors D and E?",
+      "How does method F reduce risk G?"
+    ]
+  },
+  "dag": {
+    "nodes": [
+      "entity_0",
+      "entity_1",
+      "entity_2",
+      "entity_3",
+      "entity_4",
+      "entity_5",
+      "entity_6",
+      "entity_7",
+      "entity_8",
+      "entity_9",
+      "entity_10",
+      "entity_11",
+      "entity_12",
+      "entity_13",
+      "entity_14",
+      "entity_15",
+      "entity_16",
+      "entity_17",
+      "entity_18",
+      "entity_19",
+      "entity_20",
+      "entity_21",
+      "entity_22",
+      "entity_23",
+      "entity_24",
+      "entity_25",
+      "entity_26",
+      "entity_27",
+      "entity_28",
+      "entity_29",
+      "entity_30",
+      "entity_31",
+      "entity_32",
+      "entity_33",
+      "entity_34",
+      "entity_35",
+      "entity_36"
+    ],
+    "edges": [
+      {
+        "source": "entity_0",
+        "target": "entity_2",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_1",
+        "target": "entity_2",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_2",
+        "target": "entity_3",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_3",
+        "target": "entity_12",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_4",
+        "target": "entity_16",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_5",
+        "target": "entity_18",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_5",
+        "target": "entity_12",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_6",
+        "target": "entity_16",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_7",
+        "target": "entity_32",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_32",
+        "target": "entity_4",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_8",
+        "target": "entity_19",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_19",
+        "target": "entity_9",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_9",
+        "target": "entity_0",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_10",
+        "target": "entity_11",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_11",
+        "target": "entity_12",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_13",
+        "target": "entity_15",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_15",
+        "target": "entity_16",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_16",
+        "target": "entity_36",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_14",
+        "target": "entity_2",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_2",
+        "target": "entity_29",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_30",
+        "target": "entity_32",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_31",
+        "target": "entity_32",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_33",
+        "target": "entity_34",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_34",
+        "target": "entity_4",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_35",
+        "target": "entity_19",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_25",
+        "target": "entity_5",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_26",
+        "target": "entity_5",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_22",
+        "target": "entity_18",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_23",
+        "target": "entity_12",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_24",
+        "target": "entity_15",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_27",
+        "target": "entity_13",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_28",
+        "target": "entity_2",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_20",
+        "target": "entity_16",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_21",
+        "target": "entity_18",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_17",
+        "target": "entity_12",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_16",
+        "target": "entity_10",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_3",
+        "target": "entity_29",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_12",
+        "target": "entity_36",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_8",
+        "target": "entity_35",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_6",
+        "target": "entity_1",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_7",
+        "target": "entity_30",
+        "weight": 1.0
+      },
+      {
+        "source": "entity_31",
+        "target": "entity_12",
+        "weight": 1.0
+      }
+    ]
+  },
+  "triplets": [
+    {
+      "subject": "entity_0",
+      "relation": "determines_magnitude_of",
+      "object": "entity_2"
+    },
+    {
+      "subject": "entity_1",
+      "relation": "modulates_via_cosine_term",
+      "object": "entity_2"
+    },
+    {
+      "subject": "entity_2",
+      "relation": "causes",
+      "object": "entity_3"
+    },
+    {
+      "subject": "entity_3",
+      "relation": "leads_to",
+      "object": "entity_12"
+    },
+    {
+      "subject": "entity_4",
+      "relation": "contributes_to",
+      "object": "entity_16"
+    },
+    {
+      "subject": "entity_5",
+      "relation": "causes",
+      "object": "entity_18"
+    },
+    {
+      "subject": "entity_5",
+      "relation": "leads_to",
+      "object": "entity_12"
+    },
+    {
+      "subject": "entity_6",
+      "relation": "influences",
+      "object": "entity_16"
+    },
+    {
+      "subject": "entity_7",
+      "relation": "determines",
+      "object": "entity_32"
+    },
+    {
+      "subject": "entity_32",
+      "relation": "scales",
+      "object": "entity_4"
+    },
+    {
+      "subject": "entity_8",
+      "relation": "enables",
+      "object": "entity_19"
+    },
+    {
+      "subject": "entity_19",
+      "relation": "increases",
+      "object": "entity_9"
+    },
+    {
+      "subject": "entity_9",
+      "relation": "modifies_effective",
+      "object": "entity_0"
+    },
+    {
+      "subject": "entity_10",
+      "relation": "determines",
+      "object": "entity_11"
+    },
+    {
+      "subject": "entity_11",
+      "relation": "competes_against",
+      "object": "entity_12"
+    },
+    {
+      "subject": "entity_13",
+      "relation": "achieves",
+      "object": "entity_15"
+    },
+    {
+      "subject": "entity_15",
+      "relation": "reduces",
+      "object": "entity_16"
+    },
+    {
+      "subject": "entity_16",
+      "relation": "target_of",
+      "object": "entity_36"
+    },
+    {
+      "subject": "entity_14",
+      "relation": "eliminates",
+      "object": "entity_2"
+    },
+    {
+      "subject": "entity_2",
+      "relation": "is_type_of",
+      "object": "entity_29"
+    },
+    {
+      "subject": "entity_30",
+      "relation": "increases",
+      "object": "entity_32"
+    },
+    {
+      "subject": "entity_31",
+      "relation": "permanently_increases",
+      "object": "entity_32"
+    },
+    {
+      "subject": "entity_33",
+      "relation": "related_to_real_by",
+      "object": "entity_34"
+    },
+    {
+      "subject": "entity_34",
+      "relation": "modulates",
+      "object": "entity_4"
+    },
+    {
+      "subject": "entity_35",
+      "relation": "depends_on",
+      "object": "entity_19"
+    },
+    {
+      "subject": "entity_25",
+      "relation": "triggers",
+      "object": "entity_5"
+    },
+    {
+      "subject": "entity_26",
+      "relation": "amplifies",
+      "object": "entity_5"
+    },
+    {
+      "subject": "entity_22",
+      "relation": "prevents_up_to",
+      "object": "entity_18"
+    },
+    {
+      "subject": "entity_23",
+      "relation": "mitigates_dynamic",
+      "object": "entity_12"
+    },
+    {
+      "subject": "entity_24",
+      "relation": "determines_efficiency_of",
+      "object": "entity_15"
+    },
+    {
+      "subject": "entity_27",
+      "relation": "enables_formation_of",
+      "object": "entity_13"
+    },
+    {
+      "subject": "entity_28",
+      "relation": "affects_duration_of",
+      "object": "entity_2"
+    },
+    {
+      "subject": "entity_20",
+      "relation": "determines_baseline_of",
+      "object": "entity_16"
+    },
+    {
+      "subject": "entity_21",
+      "relation": "drives",
+      "object": "entity_18"
+    },
+    {
+      "subject": "entity_17",
+      "relation": "correlates_with",
+      "object": "entity_12"
+    },
+    {
+      "subject": "entity_16",
+      "relation": "must_be_overcome_by",
+      "object": "entity_10"
+    },
+    {
+      "subject": "entity_3",
+      "relation": "results_from",
+      "object": "entity_29"
+    },
+    {
+      "subject": "entity_12",
+      "relation": "motivates",
+      "object": "entity_36"
+    },
+    {
+      "subject": "entity_8",
+      "relation": "causes",
+      "object": "entity_35"
+    },
+    {
+      "subject": "entity_6",
+      "relation": "determines_wetting_of",
+      "object": "entity_1"
+    },
+    {
+      "subject": "entity_7",
+      "relation": "influences_contact",
+      "object": "entity_30"
+    },
+    {
+      "subject": "entity_31",
+      "relation": "permanently_enables",
+      "object": "entity_12"
+    }
+  ]
+}

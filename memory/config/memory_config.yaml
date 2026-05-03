@@ -1,0 +1,112 @@
+# Nouse Hermes — LACE-Powered Memory System Configuration
+# ========================================================
+# This file configures the cellular automata-based memory system.
+# All parameters can be tuned for different use cases.
+
+# ============================================================================
+# Core CA Parameters
+# ============================================================================
+
+ca:
+  # Grid size (grid_size x grid_size)
+  grid_size: 100
+  
+  # Base decay rate per CA step (exponential decay of memory states)
+  # Higher = faster forgetting, lower = longer retention
+  decay_rate: 0.02
+  
+  # State threshold for consolidation eligibility
+  consolidation_threshold: 0.7
+
+# ============================================================================
+# Memory Tier Configuration
+# ============================================================================
+
+tiers:
+  short_term:
+    name: "short_term"
+    max_capacity: 50           # Working buffer size
+    decay_rate: 0.02           # Fastest decay (working memory)
+    consolidation_threshold: 0.7
+    
+    # Promotion to mid-term requires surviving this many steps above threshold
+    min_persistence_steps: 10
+    
+  mid_term:
+    name: "mid_term" 
+    max_capacity: 200          # Episodic memory buffer
+    decay_rate: 0.005          # Slower decay (experiences persist longer)
+    consolidation_threshold: 0.5
+    
+    # Betweenness centrality threshold for long-term promotion
+    centrality_threshold: 0.05
+    
+    # Min steps to survive before eligible for promotion
+    min_persistence_steps: 30
+    
+  long_term:
+    name: "long_term"
+    max_capacity: 1000         # Semantic knowledge base
+    decay_rate: 0.001          # Very slow decay (core concepts are stable)
+    consolidation_threshold: 0.3
+    
+    min_persistence_steps: 50
+
+# ============================================================================
+# Memory Dynamics Rules
+# ============================================================================
+
+rules:
+  memory_decay:
+    hub_decay_factor: 0.5      # Hub nodes decay at 50% of base rate
+    bridge_decay_factor: 0.7   # Bridge nodes decay at 70% of base rate
+    
+  consolidation:
+    persistence_window: 30     # Steps to track for persistence check
+    association_strength_gain: 0.01  # How much co-active pairs strengthen per step
+    
+  spreading_activation:
+    spread_rate: 0.3           # Activation spread per hop (0-1)
+    decay_per_hop: 0.9         # Decay factor per hop (0-1)
+    max_steps: 20              # Max propagation steps for retrieval
+
+# ============================================================================
+# Causal String Diagram Encoding
+# ============================================================================
+
+encoding:
+  # Grid mapping parameters
+  grid_size: 100
+  
+  # Initial state assignment based on causal role
+  initial_strengths:
+    hub: 0.8                 # Hub nodes (many connections) start strong
+    bridge: 0.65             # Bridge nodes moderate strength
+    leaf: 0.5                # Leaf nodes default strength
+    root: 0.7                # Root nodes (causal origins) stronger
+  
+  # Causal chain tracking
+  max_chains_tracked: 100    # Keep last N causal chains in memory
+
+# ============================================================================
+# Retrieval Configuration
+# ============================================================================
+
+retrieval:
+  default_top_k: 5           # Number of results per query
+  min_activation_threshold: 0.01  # Minimum activation to count as retrieved
+  
+  # Tier boosting (multiplier for relevant memories in each tier)
+  tier_boosts:
+    long_term: 1.1           # Long-term gets slight boost (more stable)
+    mid_term: 1.0            # No boost for mid-term
+    short_term: 0.9          # Short-term slightly penalized (less reliable)
+
+# ============================================================================
+# Persistence / Storage
+# ============================================================================
+
+storage:
+  directory: "memory_data"   # Relative to memory/ module path
+  save_interval_steps: 100   # Auto-save every N CA steps
+  max_memory_file_size_mb: 50

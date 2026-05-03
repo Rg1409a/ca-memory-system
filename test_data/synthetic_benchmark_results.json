@@ -1,0 +1,122 @@
+{
+  "test_data_meta": {
+    "description": "Causal DAG for domain knowledge \u2014 test case for CA memory system benchmarking",
+    "source": "Synthetic test data (generic causal relationships)",
+    "total_triplets": 47,
+    "unique_nodes": 38
+  },
+  "queries": {
+    "entity_b_cause": {
+      "question": "What causes entity B in the domain?",
+      "expected_nodes": [
+        "entity_0",
+        "entity_1",
+        "entity_2",
+        "entity_3"
+      ]
+    },
+    "factor_x_outcome_y": {
+      "question": "How does factor X affect outcome Y?",
+      "expected_nodes": [
+        "entity_6",
+        "entity_7",
+        "entity_12"
+      ]
+    },
+    "mechanism_a_vs_b": {
+      "question": "Compare mechanism A vs mechanism B for process C",
+      "expected_nodes": [
+        "entity_4",
+        "entity_5"
+      ]
+    },
+    "method_f_risk_g": {
+      "question": "How does method F reduce risk G?",
+      "expected_nodes": []
+    }
+  },
+  "ca": {
+    "capillary_locking": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.108,
+      "recall": 1.0,
+      "f1": 0.195,
+      "hit_rate": true
+    },
+    "tln_stiction_risk": {
+      "retrieved_count": 37,
+      "time_sec": 0.0007,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    },
+    "v_dw_vs_electrostatic": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.054,
+      "recall": 1.0,
+      "f1": 0.103,
+      "hit_rate": true
+    },
+    "silanol_pathway": {
+      "retrieved_count": 37,
+      "time_sec": 0.0008,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    },
+    "sam_mechanism": {
+      "retrieved_count": 37,
+      "time_sec": 0.0006,
+      "precision": 0.081,
+      "recall": 1.0,
+      "f1": 0.15,
+      "hit_rate": true
+    }
+  },
+  "chromadb": {
+    "capillary_locking": {
+      "retrieved_count": 5,
+      "time_sec": 0.0786,
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.444,
+      "hit_rate": true
+    },
+    "tln_stiction_risk": {
+      "retrieved_count": 5,
+      "time_sec": 0.0897,
+      "precision": 0.4,
+      "recall": 0.667,
+      "f1": 0.5,
+      "hit_rate": true
+    },
+    "v_dw_vs_electrostatic": {
+      "retrieved_count": 5,
+      "time_sec": 0.0789,
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.286,
+      "hit_rate": true
+    },
+    "silanol_pathway": {
+      "retrieved_count": 5,
+      "time_sec": 0.0888,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
+      "hit_rate": true
+    },
+    "sam_mechanism": {
+      "retrieved_count": 5,
+      "time_sec": 0.0852,
+      "precision": 0.4,
+      "recall": 0.667,
+      "f1": 0.5,
+      "hit_rate": true
+    }
+  }
+}
